@@ -54,6 +54,10 @@ const skillsSection = {
       fontAwesomeClassname: "fab fa-js"
     },
     {
+      skillName: "TypeScript",
+      fontAwesomeClassname: "fab fa-js-square"
+    },
+    {
       skillName: "Node.js",
       fontAwesomeClassname: "fab fa-node"
     },
@@ -64,6 +68,10 @@ const skillsSection = {
     {
       skillName: "Vue.js",
       fontAwesomeClassname: "fab fa-vuejs"
+    },
+    {
+      skillName: "Flask",
+      fontAwesomeClassname: "fab fa-python"
     },
     {
       skillName: "AWS",
@@ -78,8 +86,36 @@ const skillsSection = {
       fontAwesomeClassname: "fas fa-database"
     },
     {
+      skillName: "SQL",
+      fontAwesomeClassname: "fas fa-database"
+    },
+    {
       skillName: "Git",
       fontAwesomeClassname: "fab fa-git-alt"
+    },
+    {
+      skillName: "HTML5",
+      fontAwesomeClassname: "fab fa-html5"
+    },
+    {
+      skillName: "CSS3",
+      fontAwesomeClassname: "fab fa-css3-alt"
+    },
+    {
+      skillName: "Vim",
+      fontAwesomeClassname: "fas fa-terminal"
+    },
+    {
+      skillName: "Lua",
+      fontAwesomeClassname: "fas fa-code"
+    },
+    {
+      skillName: "ExpressJs",
+      fontAwesomeClassname: "fas fa-server"
+    },
+    {
+      skillName: "Machine Learning",
+      fontAwesomeClassname: "fas fa-brain"
     }
   ],
   display: true
