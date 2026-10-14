@@ -1,0 +1,224 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=1.3 cm,
+    bottom=1.2 cm,
+    left=2 cm,
+    right=2 cm,
+    footskip=1.0 cm,
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 79, 144}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={MD Sadiq Hasan Ansari - CV},
+    pdfauthor={MD Sadiq Hasan Ansari},
+    pdfcreator={LaTeX},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+\ifPDFTeX
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+\fi
+
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0cm}
+\makeatletter
+\let\ps@customFooterStyle\ps@plain
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{-1pt}{0.22 cm}{0.14 cm}
+
+\renewcommand\labelitemi{$\circ$}
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.06 cm,
+        parsep=0.06 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.06 cm,
+        parsep=0.06 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{0.2 cm + 0.00001 cm}{0.2 cm + 0.00001 cm}
+}{
+    \end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+\let\hrefWithoutArrow\href
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+\begin{document}
+    \begin{header}
+        \textbf{\fontsize{24 pt}{24 pt}\selectfont MD SADIQ HASAN ANSARI}
+
+        \vspace{0.15 cm}
+
+        {\normalsize \color{primaryColor}\textbf{AI Engineer}} \; {\normalsize\color{gray} Generative AI \textperiodcentered{} LLMs \textperiodcentered{} Python \textperiodcentered{} RAG \textperiodcentered{} AWS}
+
+        \vspace{0.18 cm}
+
+        \mbox{\hrefWithoutArrow{mailto:eth.sadiq@gmail.com}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}eth.sadiq@gmail.com}}%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{tel:08553809556}{\color{black}{\footnotesize\faPhone*}\hspace*{0.13cm}08553809556}}%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://linkedin.com/in/sadiq-hasan-in}{\color{black}{\footnotesize\faLinkedinIn}\hspace*{0.13cm}sadiq-hasan-in}}%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://github.com/sadiq1402}{\color{black}{\footnotesize\faGithub}\hspace*{0.13cm}sadiq1402}}%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://sadiq-ai.dev/cv}{\color{black}{\footnotesize\faGlobe}\hspace*{0.13cm}sadiq-ai.dev}}%
+    \end{header}
+
+    \vspace{0.02 cm}
+
+    \section{Summary}
+        \begin{onecolentry}
+            AI Engineer with production experience designing and shipping \textbf{Generative AI} and \textbf{LLM}-powered applications in \textbf{Python}. Strong in \textbf{prompt engineering}, \textbf{RAG}-style retrieval and summarization, multi-provider LLM orchestration, \textbf{REST APIs}, and \textbf{AWS} cloud deployment. Delivers reliable, scalable AI solutions and thrives in fast-paced enterprise environments.
+        \end{onecolentry}
+
+    \section{Skills}
+        \begin{onecolentry}
+            \textbf{Languages:} Python, JavaScript, TypeScript, SQL
+        \end{onecolentry}
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \textbf{Generative AI \& LLMs:} LLM Integration, Prompt Engineering, RAG (Retrieval-Augmented Generation), Multi-Provider LLM Orchestration, OpenAI API, AWS Bedrock, Conversational AI, AI Agents \& Chatbots, Voice AI
+        \end{onecolentry}
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \textbf{Machine Learning:} Scikit-learn, TensorFlow, Pandas, NumPy, Feature Engineering, Supervised \& Unsupervised Learning
+        \end{onecolentry}
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \textbf{Backend \& APIs:} FastAPI, Node.js, Express.js, REST APIs, JSON, Microservices, WebSockets
+        \end{onecolentry}
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \textbf{Cloud \& MLOps:} AWS (Lambda, API Gateway, SQS, S3, ECS, Bedrock), Serverless Architecture, Docker, CI/CD, Model Deployment
+        \end{onecolentry}
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \textbf{Databases \& Tools:} PostgreSQL, MongoDB, Redis, SQLite, Git, GitHub, Linux
+        \end{onecolentry}
+
+    \section{Experience}
+
+        \begin{twocolentry}{
+        \textit{Vsynergize AI}
+
+        \textit{Aug 2025 -- Present}}
+            \textbf{AI Engineer}
+
+            \textit{AI Voice, LLM \& Agentic Systems}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Build and deploy production-grade \textbf{Generative AI} and \textbf{LLM}-powered agents in \textbf{Python} for enterprise workflows, serving \textbf{1000+ concurrent} interactions at low latency.
+                \item Design \textbf{prompt engineering} strategies and \textbf{multi-provider LLM orchestration} to optimize the accuracy, tone, and reliability of AI model outputs across use cases.
+                \item Develop retrieval-and-summarization (\textbf{RAG}-style) pipelines on \textbf{AWS Bedrock} for transcript intelligence, structured AI summaries, and conversational insight extraction.
+                \item Engineered an \textbf{Insurance Claim Status AI Agent} that retrieves insurer data and generates structured, LLM-driven summaries to automate customer interactions.
+                \item Architect scalable \textbf{REST APIs} and event-driven \textbf{microservices} with \textbf{FastAPI}, AWS Lambda, API Gateway, SQS, and Redis for fault-tolerant, real-time processing.
+                \item Integrate real-time speech and conversational understanding (AssemblyAI, LiveKit, Plivo) into LLM workflows powering enterprise \textbf{AI chatbots} and telephony.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.18 cm}
+
+        \begin{twocolentry}{
+        \textit{Annam AI, IIT Ropar}
+
+        \textit{May 2025 -- July 2025}}
+            \textbf{Generative AI Research Intern}
+            \textit{\href{https://pragati-ai.streamlit.app/}{Live Demo}}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Built \textbf{PRAGATI-AI}, a Generative AI model helping farmers improve crop yield through pollination monitoring.
+                \item Applied Generative AI and machine learning in \textbf{Python} (Scikit-learn, TensorFlow) for model development and evaluation.
+                \item Owned data preprocessing, model development, and research documentation across the project lifecycle.
+            \end{highlights}
+        \end{onecolentry}
+
+    \section{Education}
+
+        \begin{twocolentry}{
+        \textit{Sept 2022 -- March 2026}}
+            \textbf{Indian Institute of Technology, Madras}
+
+            \textit{Bachelor of Science in Data Science}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Coursework: Deep Learning, Machine Learning, Data Visualization, Managerial Economics. \quad CGPA: 7.27/10
+            \end{highlights}
+        \end{onecolentry}
+
+    \section{Beyond Work}
+        \begin{onecolentry}
+            \textbf{Relentless persistence.} Cleared every FromSoftware ``Souls'' title --- \textit{Sekiro}, \textit{Elden Ring} (incl. \textit{Shadow of the Erdtree}), and \textit{Wuchang: Fallen Feathers} --- through hundreds of deaths. The same iterate-through-failure mindset I bring to debugging and shipping reliable systems.
+        \end{onecolentry}
+
+\end{document}
