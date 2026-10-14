@@ -117,9 +117,9 @@ const projects = [
     name: "AI Calling Platform",
     tagline: "Browser-based voice calling with real-time AI pipelines",
     description:
-      "Built core AI features for a browser-based calling platform — outbound and inbound voice agents (real-time STT → LLM → TTS) across 5 AI-driven campaign types, a live AI call copilot that coaches human agents with RAG-grounded, citation-backed suggestions, call transcription and sentiment analysis, and AI-scored LinkedIn lead sourcing. 90K+ lines of code, 400+ automated tests.",
-    mockupHeadline: "AI copilot coaching every live call",
-    mockupSub: "RAG-grounded nudges, cited from your knowledge base.",
+      "Built core AI features for a browser-based calling platform — outbound and inbound voice agents (real-time STT → LLM → TTS) supporting any number of configurable campaigns, with multi-agent handoff that routes complex sub-tasks to specialized agents mid-call. Plus a live AI call copilot that coaches human agents with RAG-grounded, citation-backed suggestions, call transcription and sentiment analysis, and AI-scored LinkedIn lead sourcing. 90K+ lines of code, 400+ automated tests.",
+    mockupHeadline: "Specialized agents hand off mid-call",
+    mockupSub: "Complex sub-tasks routed to the right agent, live.",
     tags: ["LiveKit", "Plivo", "AWS Bedrock", "RAG"],
     link: null
   },
