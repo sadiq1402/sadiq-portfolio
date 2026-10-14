@@ -114,6 +114,19 @@ const projects = [
     idx: "02",
     year: "2025",
     status: "Production",
+    name: "AI Calling Platform",
+    tagline: "Browser-based voice calling with real-time AI pipelines",
+    description:
+      "Built core AI features for a browser-based calling platform — outbound and inbound voice agents (real-time STT → LLM → TTS) across 5 AI-driven campaign types, a live AI call copilot that coaches human agents with RAG-grounded, citation-backed suggestions, call transcription and sentiment analysis, and AI-scored LinkedIn lead sourcing. 90K+ lines of code, 400+ automated tests.",
+    mockupHeadline: "AI copilot coaching every live call",
+    mockupSub: "RAG-grounded nudges, cited from your knowledge base.",
+    tags: ["LiveKit", "Plivo", "AWS Bedrock", "RAG"],
+    link: null
+  },
+  {
+    idx: "03",
+    year: "2025",
+    status: "Production",
     name: "Multi-Role EdTech LMS Platform",
     tagline: "Backend lead on a production learning management system",
     description:
@@ -124,7 +137,7 @@ const projects = [
     link: null
   },
   {
-    idx: "03",
+    idx: "04",
     year: "2025",
     status: "Production",
     name: "Insurance Claim Status Agent",
@@ -137,7 +150,7 @@ const projects = [
     link: null
   },
   {
-    idx: "04",
+    idx: "05",
     year: "2025",
     status: "Research — Annam AI, IIT Ropar",
     name: "PRAGATI-AI",
