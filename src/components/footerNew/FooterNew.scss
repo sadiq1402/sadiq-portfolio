@@ -1,0 +1,10 @@
+.footer-new {
+  padding: 32px clamp(20px, 4vw, 64px);
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--text-faint);
+}

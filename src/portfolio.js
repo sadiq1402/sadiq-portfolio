@@ -1,295 +1,161 @@
-import emoji from "react-easy-emoji";
-import splashAnimation from "./assets/lottie/splashAnimation";
-
-const splashScreen = {
-  enabled: true,
-  animation: splashAnimation,
-  duration: 2000
-};
-
-const illustration = {
-  animated: true
-};
-
 const greeting = {
   username: "Sadiq Hasan",
-  title: "Hi, I'm Sadiq",
-  subTitle: emoji(
-    "AI & Voice Agent Developer 🚀 building production-grade AI voice systems, telephony solutions, and machine learning applications. Currently pursuing Data Science at IIT Madras."
-  ),
-  resumeLink:
-    "https://drive.google.com/file/d/1r4jQRPn5nRjl2VZ1B7i_F3RXLRE_uClN/view?usp=sharing",
-  displayGreeting: true
+  logoInitials: "SH",
+  location: "Chennai, India",
+  title: "AI Engineer building Generative AI retrieval and agent systems that hold up in production.",
+  taglineLead: "AI Engineer",
+  taglineRest:
+    "building Generative AI retrieval and agent systems that hold up in production.",
+  resumeLink: "/resume.pdf"
 };
 
 const socialMediaLinks = {
   github: "https://github.com/sadiq1402",
   linkedin: "https://www.linkedin.com/in/sadiq-hasan-in",
   gmail: "eth.sadiq@gmail.com",
-  display: true
+  phone: "+91 85538 09556"
 };
 
-const skillsSection = {
-  title: "What I Do",
-  subTitle: "AI & VOICE AGENT DEVELOPER | CLOUD ARCHITECT | DATA SCIENTIST",
-  skills: [
-    emoji(
-      "⚡ Design and develop production-grade AI voice agents for real-world telephony systems"
-    ),
-    emoji(
-      "⚡ Build scalable serverless architectures on AWS (Lambda, API Gateway, SQS, Bedrock)"
-    ),
-    emoji(
-      "⚡ Implement real-time speech-to-text processing and LLM integration for conversational AI"
-    )
-  ],
-
-  softwareSkills: [
-    {
-      skillName: "Python",
-      fontAwesomeClassname: "fab fa-python"
-    },
-    {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
-    },
-    {
-      skillName: "TypeScript",
-      fontAwesomeClassname: "fab fa-js-square"
-    },
-    {
-      skillName: "Node.js",
-      fontAwesomeClassname: "fab fa-node"
-    },
-    {
-      skillName: "React",
-      fontAwesomeClassname: "fab fa-react"
-    },
-    {
-      skillName: "Vue.js",
-      fontAwesomeClassname: "fab fa-vuejs"
-    },
-    {
-      skillName: "Flask",
-      fontAwesomeClassname: "fab fa-python"
-    },
-    {
-      skillName: "AWS",
-      fontAwesomeClassname: "fab fa-aws"
-    },
-    {
-      skillName: "Docker",
-      fontAwesomeClassname: "fab fa-docker"
-    },
-    {
-      skillName: "PostgreSQL",
-      fontAwesomeClassname: "fas fa-database"
-    },
-    {
-      skillName: "SQL",
-      fontAwesomeClassname: "fas fa-database"
-    },
-    {
-      skillName: "Git",
-      fontAwesomeClassname: "fab fa-git-alt"
-    },
-    {
-      skillName: "HTML5",
-      fontAwesomeClassname: "fab fa-html5"
-    },
-    {
-      skillName: "CSS3",
-      fontAwesomeClassname: "fab fa-css3-alt"
-    },
-    {
-      skillName: "Vim",
-      fontAwesomeClassname: "fas fa-terminal"
-    },
-    {
-      skillName: "Lua",
-      fontAwesomeClassname: "fas fa-code"
-    },
-    {
-      skillName: "ExpressJs",
-      fontAwesomeClassname: "fas fa-server"
-    },
-    {
-      skillName: "Machine Learning",
-      fontAwesomeClassname: "fas fa-brain"
-    }
-  ],
-  display: true
+const about = {
+  lead:
+    "I build Generative AI systems — RAG pipelines, LLM agents, and the serverless infra that keeps them running at scale.",
+  paragraphs: [
+    "AI Engineer with production experience designing and shipping Generative AI and LLM-powered applications in Python. Currently pursuing a B.S. in Data Science at IIT Madras.",
+    "Right now I'm building production AI agents at Vsynergize AI — prompt engineering, multi-provider LLM orchestration, and RAG-style retrieval pipelines on AWS Bedrock for real enterprise workflows.",
+    "Before that, I was a Generative AI Research Intern at Annam AI (IIT Ropar), building PRAGATI-AI to help farmers improve crop yield through pollination monitoring."
+  ]
 };
+
+const skillCategories = [
+  {
+    category: "Languages",
+    skills: ["Python", "JavaScript", "TypeScript", "SQL"]
+  },
+  {
+    category: "Generative AI & LLMs",
+    skills: [
+      "LLM Integration",
+      "Prompt Engineering",
+      "RAG",
+      "Multi-Provider Orchestration",
+      "OpenAI API",
+      "AWS Bedrock",
+      "AI Agents & Chatbots",
+      "Voice AI"
+    ]
+  },
+  {
+    category: "Machine Learning",
+    skills: ["Scikit-learn", "TensorFlow", "Pandas", "NumPy", "Feature Engineering"]
+  },
+  {
+    category: "Backend & APIs",
+    skills: ["FastAPI", "Node.js", "Express.js", "REST APIs", "WebSockets", "Microservices"]
+  },
+  {
+    category: "Cloud & MLOps",
+    skills: ["AWS Lambda", "API Gateway", "SQS", "S3", "ECS", "Docker", "CI/CD"]
+  },
+  {
+    category: "Databases & Tools",
+    skills: ["PostgreSQL", "MongoDB", "Redis", "SQLite", "Git", "GitHub", "Linux"]
+  }
+];
 
 const educationInfo = {
-  display: true,
-  schools: [
-    {
-      schoolName: "Indian Institute of Technology, Madras",
-      logo: require("./assets/images/iitmLogo.png"),
-      subHeader: "Bachelor's of Science in Data Science",
-      duration: "September 2022 - March 2026",
-      desc: "CGPA: 7.41/10",
-      descBullets: []
-    }
-  ]
+  schoolName: "Indian Institute of Technology, Madras",
+  subHeader: "Bachelor of Science in Data Science",
+  duration: "Sept 2022 – March 2026",
+  note:
+    "Coursework: Deep Learning, Machine Learning, Data Visualization, Managerial Economics. CGPA: 7.27/10"
 };
 
-const techStack = {
-  viewSkillBars: true,
-  experience: [
-    {
-      Stack: "AI & Voice Agents",
-      progressPercentage: "85%"
-    },
-    {
-      Stack: "Backend & Cloud (AWS)",
-      progressPercentage: "80%"
-    },
-    {
-      Stack: "Data Science & ML",
-      progressPercentage: "75%"
-    }
-  ],
-  displayCodersrank: false
-};
+const experience = [
+  {
+    role: "AI Engineer",
+    company: "Vsynergize AI",
+    dateLoc: "Aug 2025 – Present · Remote",
+    bullets: [
+      "Build and deploy production-grade Generative AI and LLM-powered agents in Python for enterprise workflows, serving 1000+ concurrent interactions at low latency.",
+      "Design prompt engineering strategies and multi-provider LLM orchestration to optimize accuracy, tone and reliability across use cases.",
+      "Develop retrieval-and-summarization (RAG-style) pipelines on AWS Bedrock for transcript intelligence and structured AI summaries.",
+      "Engineered an Insurance Claim Status AI Agent that retrieves insurer data and generates structured, LLM-driven summaries.",
+      "Architect scalable REST APIs and event-driven microservices with FastAPI, AWS Lambda, API Gateway, SQS and Redis.",
+      "Integrate real-time speech and conversational understanding (AssemblyAI, LiveKit, Plivo) into LLM workflows powering enterprise chatbots and telephony."
+    ]
+  },
+  {
+    role: "Generative AI Research Intern",
+    company: "Annam AI, IIT Ropar",
+    dateLoc: "May 2025 – Jul 2025",
+    bullets: [
+      "Built PRAGATI-AI, a Generative AI model helping farmers improve crop yield through pollination monitoring.",
+      "Applied Generative AI and machine learning in Python (Scikit-learn, TensorFlow) for model development and evaluation.",
+      "Owned data preprocessing, model development and research documentation across the project lifecycle."
+    ]
+  }
+];
 
-const workExperiences = {
-  display: true,
-  experience: [
-    {
-      role: "Node.js Developer Intern",
-      company: "Vsynergize AI",
-      companylogo: require("./assets/images/vsynergizeLogo.jpg"),
-      date: "Aug 2025 – Present",
-      desc: "AI Voice & Telephony Systems",
-      descBullets: [
-        "Built Virtual Receptionist AI Agent handling 1000+ concurrent calls with real-time speech processing",
-        "Developed Insurance Claim Status AI Agent with structured AI summaries using AWS Bedrock",
-        "Integrated real-time speech-to-text using AssemblyAI for conversational understanding",
-        "Architected serverless system on AWS (Lambda, API Gateway, SQS)"
-      ]
-    },
-    {
-      role: "Gen AI Research Intern",
-      company: "Annam AI (IIT Ropar)",
-      companylogo: require("./assets/images/annamaiLogo.jpg"),
-      date: "May 2025 – July 2025",
-      desc: "Developed PRAGATI-AI model for agricultural pollination monitoring",
-      descBullets: [
-        "Applied Generative AI techniques with Python, Scikit-learn, TensorFlow",
-        "Collaborated on data preprocessing, model development, and research documentation"
-      ]
-    }
-  ]
-};
-
-const openSource = {
-  showGithubProfile: "false",
-  display: false
-};
-
-const bigProjects = {
-  title: "Projects",
-  subtitle: "AI SYSTEMS I'VE BUILT",
-  projects: [
-    {
-      image: require("./assets/images/annamaiLogo.jpg"),
-      projectName: "PRAGATI-AI",
-      projectDesc:
-        "AI model to help farmers improve crop yield through Pollination monitoring using Generative AI and ML techniques",
-      footerLink: [
-        {
-          name: "View Demo",
-          url: "https://pragati-ai.streamlit.app/"
-        }
-      ]
-    },
-    {
-      image: require("./assets/images/vsynergizeLogo.jpg"),
-      projectName: "Virtual Receptionist AI Agent",
-      projectDesc:
-        "Production-grade AI voice agent handling 1000+ concurrent calls with real-time speech processing and intent handling",
-      footerLink: []
-    },
-    {
-      image: require("./assets/images/vsynergizeLogo.jpg"),
-      projectName: "Insurance Claim Status AI Agent",
-      projectDesc:
-        "AI agent that interacts with insurers, retrieves claim details, and generates structured AI summaries using AWS Bedrock",
-      footerLink: []
-    }
-  ],
-  display: true
-};
-
-const achievementSection = {
-  title: emoji("Achievements And Certifications 🏆"),
-  subtitle: "Achievements and certifications",
-  achievementsCards: [],
-  display: false
-};
-
-const blogSection = {
-  title: "Blogs",
-  subtitle: "Technical writing and insights",
-  displayMediumBlogs: "false",
-  blogs: [],
-  display: false
-};
-
-const talkSection = {
-  title: "Talks",
-  subtitle: emoji("Presentations and speaking engagements"),
-  talks: [],
-  display: false
-};
-
-const podcastSection = {
-  title: emoji("Podcast 🎙️"),
-  subtitle: "Conversations about technology",
-  podcast: [],
-  display: false
-};
-
-const resumeSection = {
-  title: "Resume",
-  subtitle: "Download my resume",
-  display: true
-};
+const projects = [
+  {
+    idx: "01",
+    year: "2025",
+    status: "Production",
+    name: "Enterprise AI Agents",
+    tagline: "Multi-provider LLM orchestration for Vsynergize AI",
+    description:
+      "Production-grade Generative AI agents in Python for enterprise workflows — prompt engineering and multi-provider LLM orchestration tuned for accuracy, tone and reliability.",
+    mockupHeadline: "Serving 1000+ concurrent interactions",
+    mockupSub: "without dropping latency.",
+    tags: ["Python", "FastAPI", "AWS Bedrock"],
+    link: null
+  },
+  {
+    idx: "02",
+    year: "2025",
+    status: "Production",
+    name: "Insurance Claim Status Agent",
+    tagline: "Structured LLM summaries via AWS Bedrock",
+    description:
+      "An agent that retrieves insurer data and generates structured, LLM-driven summaries to automate customer interactions.",
+    mockupHeadline: "Claim status, summarized",
+    mockupSub: "RAG-style retrieval over insurer data.",
+    tags: ["AWS Bedrock", "RAG", "Lambda"],
+    link: null
+  },
+  {
+    idx: "03",
+    year: "2025",
+    status: "Research — Annam AI, IIT Ropar",
+    name: "PRAGATI-AI",
+    tagline: "Generative AI for agricultural pollination monitoring",
+    description:
+      "Applied Generative AI and ML (Scikit-learn, TensorFlow) to help farmers improve crop yield through pollination monitoring.",
+    mockupHeadline: "Helping farmers with PRAGATI-AI",
+    mockupSub: "Pollination monitoring via Generative AI.",
+    tags: ["Python", "Scikit-learn", "TensorFlow"],
+    link: "https://pragati-ai.streamlit.app/"
+  }
+];
 
 const contactInfo = {
-  title: emoji("Get In Touch ☎️"),
+  heading: "Let's build something.",
   subtitle:
-    "Have a project in mind or want to discuss AI solutions? Feel free to reach out.",
-  number: "+91-8553809556",
-  email_address: "eth.sadiq@gmail.com"
-};
-
-const twitterDetails = {
-  userName: "twitter",
-  display: false
+    "Open for full-time roles, contract work and AI/ML advisory. The fastest way to reach me is email — I answer all of them.",
+  email: "eth.sadiq@gmail.com",
+  phone: "+91 85538 09556"
 };
 
 const isHireable = true;
 
 export {
-  illustration,
   greeting,
   socialMediaLinks,
-  splashScreen,
-  skillsSection,
+  about,
+  skillCategories,
   educationInfo,
-  techStack,
-  workExperiences,
-  openSource,
-  bigProjects,
-  achievementSection,
-  blogSection,
-  talkSection,
-  podcastSection,
+  experience,
+  projects,
   contactInfo,
-  twitterDetails,
-  isHireable,
-  resumeSection
+  isHireable
 };

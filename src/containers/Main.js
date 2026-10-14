@@ -1,75 +1,42 @@
-import React, {useEffect, useState} from "react";
-import Header from "../components/header/Header";
-import Greeting from "./greeting/Greeting";
-import Skills from "./skills/Skills";
-import StackProgress from "./skillProgress/skillProgress";
-import WorkExperience from "./workExperience/WorkExperience";
-import Projects from "./projects/Projects";
-import StartupProject from "./StartupProjects/StartupProject";
-import Achievement from "./achievement/Achievement";
-import Blogs from "./blogs/Blogs";
-import Footer from "../components/footer/Footer";
-import Talks from "./talks/Talks";
-import Podcast from "./podcast/Podcast";
-import Education from "./education/Education";
-import ScrollToTopButton from "./topbutton/Top";
-import Twitter from "./twitter-embed/twitter";
-import Profile from "./profile/Profile";
-import SplashScreen from "./splashScreen/SplashScreen";
-import {splashScreen} from "../portfolio";
+import React, {useState} from "react";
+import Nav from "../components/nav/Nav";
+import Hero from "./hero/Hero";
+import About from "./about/About";
+import SkillsRows from "./skillsRows/SkillsRows";
+import ExperienceTabs from "./experienceTabs/ExperienceTabs";
+import WorkShowcase from "./workShowcase/WorkShowcase";
+import ContactSection from "./contactSection/ContactSection";
+import FooterNew from "../components/footerNew/FooterNew";
 import {StyleProvider} from "../contexts/StyleContext";
 import {useLocalStorage} from "../hooks/useLocalStorage";
-import "./Main.scss";
+import {useScrollReveal} from "../hooks/useScrollReveal";
+import "../theme.scss";
 
 const Main = () => {
   const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
   const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
-  const [isShowingSplashAnimation, setIsShowingSplashAnimation] =
-    useState(true);
+  const [themeVersion, setThemeVersion] = useState(0);
 
-  useEffect(() => {
-    if (splashScreen.enabled) {
-      const splashTimer = setTimeout(
-        () => setIsShowingSplashAnimation(false),
-        splashScreen.duration
-      );
-      return () => {
-        clearTimeout(splashTimer);
-      };
-    }
-  }, []);
+  useScrollReveal([themeVersion]);
 
   const changeTheme = () => {
     setIsDark(!isDark);
+    setThemeVersion(v => v + 1);
   };
 
   return (
-    <div className={isDark ? "dark-mode" : null}>
-      <StyleProvider value={{isDark: isDark, changeTheme: changeTheme}}>
-        {isShowingSplashAnimation && splashScreen.enabled ? (
-          <SplashScreen />
-        ) : (
-          <>
-            <Header />
-            <Greeting />
-            <Skills />
-            <StackProgress />
-            <Education />
-            <WorkExperience />
-            <Projects />
-            <StartupProject />
-            <Achievement />
-            <Blogs />
-            <Talks />
-            <Twitter />
-            <Podcast />
-            <Profile />
-            <Footer />
-            <ScrollToTopButton />
-          </>
-        )}
-      </StyleProvider>
-    </div>
+    <StyleProvider value={{isDark, changeTheme}}>
+      <div className={`site ${isDark ? "dark-mode" : ""}`}>
+        <Nav />
+        <Hero />
+        <About />
+        <SkillsRows />
+        <ExperienceTabs />
+        <WorkShowcase />
+        <ContactSection />
+        <FooterNew />
+      </div>
+    </StyleProvider>
   );
 };
 
