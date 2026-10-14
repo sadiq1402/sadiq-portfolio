@@ -20,7 +20,7 @@ const about = {
   lead:
     "I build Generative AI systems — RAG pipelines, LLM agents, and the serverless infra that keeps them running at scale.",
   paragraphs: [
-    "AI Engineer with production experience designing and shipping Generative AI and LLM-powered applications in Python. Currently pursuing a B.S. in Data Science at IIT Madras.",
+    "AI Engineer with production experience designing and shipping Generative AI and LLM-powered applications in Python. Undergraduate from IIT Madras.",
     "Right now I'm building production AI agents at Vsynergize AI — prompt engineering, multi-provider LLM orchestration, and RAG-style retrieval pipelines on AWS Bedrock for real enterprise workflows.",
     "Before that, I was a Generative AI Research Intern at Annam AI (IIT Ropar), building PRAGATI-AI to help farmers improve crop yield through pollination monitoring."
   ]
