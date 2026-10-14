@@ -9,17 +9,23 @@
   --text-dim: rgba(22, 22, 22, 0.62);
   --text-faint: rgba(22, 22, 22, 0.4);
   --tab-active-bg: rgba(22, 22, 22, 0.06);
+  --mockup-bg: #111111;
+  --mockup-bar: #1a1a1a;
+  --mockup-border: rgba(22, 22, 22, 0.6);
 }
 
 .dark-mode {
   --bg: #1a1b26;
-  --panel: #20212f;
-  --border: rgba(192, 202, 245, 0.14);
-  --grid: rgba(192, 202, 245, 0.07);
+  --panel: #282a3e;
+  --border: rgba(192, 202, 245, 0.18);
+  --grid: rgba(192, 202, 245, 0.08);
   --text: #c0caf5;
-  --text-dim: rgba(192, 202, 245, 0.65);
-  --text-faint: rgba(192, 202, 245, 0.42);
-  --tab-active-bg: rgba(192, 202, 245, 0.08);
+  --text-dim: rgba(192, 202, 245, 0.68);
+  --text-faint: rgba(192, 202, 245, 0.45);
+  --tab-active-bg: rgba(192, 202, 245, 0.1);
+  --mockup-bg: #0d0e16;
+  --mockup-bar: #15161f;
+  --mockup-border: rgba(192, 202, 245, 0.35);
 }
 
 .site {

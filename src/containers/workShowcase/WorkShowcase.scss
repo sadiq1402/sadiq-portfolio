@@ -16,18 +16,18 @@
 }
 
 .mockup {
-  border: 1.5px solid var(--text);
+  border: 1.5px solid var(--mockup-border);
   border-radius: 14px;
   overflow: hidden;
-  background: #111;
-  box-shadow: 6px 6px 0 var(--border);
+  background: var(--mockup-bg);
+  box-shadow: 6px 6px 0 var(--mockup-border);
 }
 
 .mockup__bar {
   display: flex;
   gap: 6px;
   padding: 12px 16px;
-  background: #1a1a1a;
+  background: var(--mockup-bar);
 
   span {
     width: 10px;
