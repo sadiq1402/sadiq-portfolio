@@ -3,8 +3,8 @@
 % Packages:
 \usepackage[
     ignoreheadfoot,
-    top=1.3 cm,
-    bottom=1.2 cm,
+    top=1.0 cm,
+    bottom=0.9 cm,
     left=2 cm,
     right=2 cm,
     footskip=1.0 cm,
@@ -52,13 +52,13 @@
 \let\ps@customFooterStyle\ps@plain
 \titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
 
-\titlespacing{\section}{-1pt}{0.22 cm}{0.14 cm}
+\titlespacing{\section}{-1pt}{0.16 cm}{0.08 cm}
 
 \renewcommand\labelitemi{$\circ$}
 \newenvironment{highlights}{
     \begin{itemize}[
-        topsep=0.06 cm,
-        parsep=0.06 cm,
+        topsep=0.03 cm,
+        parsep=0.03 cm,
         partopsep=0pt,
         itemsep=0pt,
         leftmargin=0.4 cm + 10pt
@@ -113,7 +113,7 @@
 
         {\normalsize \color{primaryColor}\textbf{AI Engineer}} \; {\normalsize\color{gray} Generative AI \textperiodcentered{} LLMs \textperiodcentered{} Python \textperiodcentered{} RAG \textperiodcentered{} AWS}
 
-        \vspace{0.18 cm}
+        \vspace{0.12 cm}
 
         \mbox{\hrefWithoutArrow{mailto:eth.sadiq@gmail.com}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}eth.sadiq@gmail.com}}%
         \kern 0.25 cm%
@@ -137,23 +137,23 @@
         \begin{onecolentry}
             \textbf{Languages:} Python, JavaScript, TypeScript, SQL
         \end{onecolentry}
-        \vspace{0.10 cm}
+        \vspace{0.06 cm}
         \begin{onecolentry}
             \textbf{Generative AI \& LLMs:} LLM Integration, Prompt Engineering, RAG (Retrieval-Augmented Generation), Multi-Provider LLM Orchestration, OpenAI API, AWS Bedrock, Conversational AI, AI Agents \& Chatbots, Voice AI
         \end{onecolentry}
-        \vspace{0.10 cm}
+        \vspace{0.06 cm}
         \begin{onecolentry}
             \textbf{Machine Learning:} Scikit-learn, TensorFlow, Pandas, NumPy, Feature Engineering, Supervised \& Unsupervised Learning
         \end{onecolentry}
-        \vspace{0.10 cm}
+        \vspace{0.06 cm}
         \begin{onecolentry}
             \textbf{Backend \& APIs:} FastAPI, Node.js, Express.js, REST APIs, JSON, Microservices, WebSockets
         \end{onecolentry}
-        \vspace{0.10 cm}
+        \vspace{0.06 cm}
         \begin{onecolentry}
             \textbf{Cloud \& MLOps:} AWS (Lambda, API Gateway, SQS, S3, ECS, Bedrock), Serverless Architecture, Docker, CI/CD, Model Deployment
         \end{onecolentry}
-        \vspace{0.10 cm}
+        \vspace{0.06 cm}
         \begin{onecolentry}
             \textbf{Databases \& Tools:} PostgreSQL, MongoDB, Redis, SQLite, Git, GitHub, Linux
         \end{onecolentry}
@@ -169,7 +169,7 @@
             \textit{AI Voice, LLM \& Agentic Systems}
         \end{twocolentry}
 
-        \vspace{0.10 cm}
+        \vspace{0.06 cm}
         \begin{onecolentry}
             \begin{highlights}
                 \item Build and deploy production-grade \textbf{Generative AI} and \textbf{LLM}-powered agents in \textbf{Python} for enterprise workflows, serving \textbf{1000+ concurrent} interactions at low latency.
@@ -177,12 +177,12 @@
                 \item Develop retrieval-and-summarization (\textbf{RAG}-style) pipelines on \textbf{AWS Bedrock} for transcript intelligence, structured AI summaries, and conversational insight extraction.
                 \item Engineered an \textbf{Insurance Claim Status AI Agent} that retrieves insurer data and generates structured, LLM-driven summaries to automate customer interactions.
                 \item Architect scalable \textbf{REST APIs} and event-driven \textbf{microservices} with \textbf{FastAPI}, AWS Lambda, API Gateway, SQS, and Redis for fault-tolerant, real-time processing.
-                \item Built core AI features for a browser-based \textbf{calling platform} (\textbf{Plivo}, \textbf{LiveKit}) — unlimited configurable outbound/inbound campaigns (STT $\to$ LLM $\to$ TTS) with \textbf{multi-agent handoff} routing complex sub-tasks to specialized agents mid-call, a real-time \textbf{AI call copilot} with \textbf{RAG}-grounded live coaching, and AI-scored \textbf{LinkedIn} lead sourcing, across 90K+ lines of code and 400+ automated tests.
+                \item Built core AI for a \textbf{calling platform} (\textbf{Plivo}, \textbf{LiveKit}): configurable voice campaigns with \textbf{multi-agent handoff}, a \textbf{RAG}-grounded \textbf{AI copilot}, and AI-scored \textbf{LinkedIn} sourcing, across 90K+ lines and 400+ tests.
                 \item Lead backend development of a multi-role \textbf{EdTech LMS platform} (\textbf{FastAPI}, PostgreSQL, AWS Lambda) spanning \textbf{500+ REST endpoints} and \textbf{90K+ lines} of Python across 5 user roles, backed by \textbf{2,100+ automated tests}.
             \end{highlights}
         \end{onecolentry}
 
-        \vspace{0.18 cm}
+        \vspace{0.12 cm}
 
         \begin{twocolentry}{
         \textit{Annam AI, IIT Ropar}
@@ -192,7 +192,7 @@
             \textit{\href{https://pragati-ai.streamlit.app/}{Live Demo}}
         \end{twocolentry}
 
-        \vspace{0.10 cm}
+        \vspace{0.06 cm}
         \begin{onecolentry}
             \begin{highlights}
                 \item Built \textbf{PRAGATI-AI}, a Generative AI model helping farmers improve crop yield through pollination monitoring.
@@ -210,11 +210,16 @@
             \textit{Bachelor of Science in Data Science}
         \end{twocolentry}
 
-        \vspace{0.10 cm}
+        \vspace{0.06 cm}
         \begin{onecolentry}
             \begin{highlights}
                 \item Coursework: Deep Learning, Machine Learning, Data Visualization, Managerial Economics. \quad CGPA: 7.27/10
             \end{highlights}
+        \end{onecolentry}
+
+    \section{Projects}
+        \begin{onecolentry}
+            \textbf{MiloJulo} (solo, pre-launch beta) --- Intent-first social discovery app for Pune. \textbf{React Native} on \textbf{Supabase} (Postgres, \textbf{RLS}, Realtime) with Cloudflare R2 media: 11K+ lines of TypeScript, 17 migrations, 28 automated RLS tests in CI.
         \end{onecolentry}
 
 \end{document}

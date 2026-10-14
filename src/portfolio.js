@@ -161,6 +161,19 @@ const projects = [
     mockupSub: "Pollination monitoring via Generative AI.",
     tags: ["Python", "Scikit-learn", "TensorFlow"],
     link: "https://pragati-ai.streamlit.app/"
+  },
+  {
+    idx: "06",
+    year: "2026",
+    status: "Solo project — pre-launch beta",
+    name: "MiloJulo",
+    tagline: "Intent-first social discovery app for Pune",
+    description:
+      "Solo-built end-to-end: a React Native mobile app on a Supabase backend (Postgres, RLS, Realtime) with Cloudflare R2 media storage. Security-first by design — every table default-deny RLS, 28 automated policy tests in CI before every migration. 11K+ lines of TypeScript across 10 feature areas, 17 migrations, 2,800+ lines of SQL.",
+    mockupHeadline: "Every table default-deny RLS",
+    mockupSub: "28 automated policy tests run in CI.",
+    tags: ["React Native", "Supabase", "PostgreSQL RLS"],
+    link: null
   }
 ];
 
