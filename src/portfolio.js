@@ -114,6 +114,19 @@ const projects = [
     idx: "02",
     year: "2025",
     status: "Production",
+    name: "Multi-Role EdTech LMS Platform",
+    tagline: "Backend lead on a production learning management system",
+    description:
+      "Led backend development of a multi-role learning platform serving Admins, Faculty, Students and Parents — 500+ REST endpoints across 90K+ lines of async Python, backed by 2,100+ automated tests, deployed serverless on AWS Lambda.",
+    mockupHeadline: "500+ endpoints, 5 user roles",
+    mockupSub: "2,100+ automated tests keep it shippable.",
+    tags: ["FastAPI", "PostgreSQL", "AWS Lambda"],
+    link: null
+  },
+  {
+    idx: "03",
+    year: "2025",
+    status: "Production",
     name: "Insurance Claim Status Agent",
     tagline: "Structured LLM summaries via AWS Bedrock",
     description:
@@ -124,7 +137,7 @@ const projects = [
     link: null
   },
   {
-    idx: "03",
+    idx: "04",
     year: "2025",
     status: "Research — Annam AI, IIT Ropar",
     name: "PRAGATI-AI",
