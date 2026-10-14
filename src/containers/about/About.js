@@ -1,5 +1,6 @@
 import React from "react";
 import {about} from "../../portfolio";
+import portrait from "../../assets/images/sadiq-portrait.jpg";
 import "./About.scss";
 
 const About = () => (
@@ -7,7 +8,7 @@ const About = () => (
     <div className="eyebrow">ABOUT</div>
     <div className="about__grid">
       <div className="about__photo reveal">
-        <span>[ Add portrait photo ]</span>
+        <img src={portrait} alt="Sadiq Hasan" />
       </div>
       <div className="reveal">
         <div className="about__lead">{about.lead}</div>
