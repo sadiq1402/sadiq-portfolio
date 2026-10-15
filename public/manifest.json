@@ -1,6 +1,6 @@
 {
   "short_name": "Sadiq Hasan",
-  "name": "Sadiq Hasan | AI & Voice Agent Developer",
+  "name": "Sadiq Hasan | AI Engineer",
   "icons": [
     {
       "src": "/favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#6c63ff",
-  "background_color": "#ffffff"
+  "theme_color": "#facc00",
+  "background_color": "#f7f5ee"
 }
