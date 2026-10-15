@@ -130,10 +130,10 @@ const projects = [
     name: "Multi-Role EdTech LMS Platform",
     tagline: "Backend lead on a production learning management system",
     description:
-      "Led backend development of a multi-role learning platform serving Admins, Faculty, Students and Parents — 500+ REST endpoints across 90K+ lines of async Python, backed by 2,100+ automated tests, deployed serverless on AWS Lambda.",
+      "Led backend development of a multi-role learning platform serving Admins, Faculty, Students and Parents — 500+ REST endpoints across 90K+ lines of async Python, with dual-gateway subscription billing (Razorpay and Stripe, webhook-verified) and 2,100+ automated tests, deployed serverless on AWS Lambda.",
     mockupHeadline: "500+ endpoints, 5 user roles",
-    mockupSub: "2,100+ automated tests keep it shippable.",
-    tags: ["FastAPI", "PostgreSQL", "AWS Lambda"],
+    mockupSub: "Razorpay + Stripe billing, webhook-verified.",
+    tags: ["FastAPI", "PostgreSQL", "Razorpay/Stripe"],
     link: null
   },
   {
