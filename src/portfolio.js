@@ -50,7 +50,7 @@ const skillCategories = [
   },
   {
     category: "Backend & APIs",
-    skills: ["FastAPI", "Node.js", "Express.js", "REST APIs", "WebSockets", "Microservices"]
+    skills: ["FastAPI", "Node.js", "Express.js", "REST APIs", "WebSockets", "Microservices", "Razorpay", "Stripe"]
   },
   {
     category: "Cloud & MLOps",
