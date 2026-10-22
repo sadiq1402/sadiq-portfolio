@@ -1,7 +1,7 @@
 const greeting = {
   username: "Sadiq Hasan",
   logoInitials: "SH",
-  location: "Chennai, India",
+  location: "Pune, India",
   title: "AI Engineer building Generative AI retrieval and agent systems that hold up in production.",
   taglineLead: "AI Engineer",
   taglineRest:
