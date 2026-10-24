@@ -45,7 +45,7 @@ const WorkShowcase = () => (
           </div>
           {project.link && (
             <a className="pill pill-outline proj__link" href={project.link}>
-              Read the write-up →
+              {project.linkLabel || "Read the write-up"} →
             </a>
           )}
         </div>

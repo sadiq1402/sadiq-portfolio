@@ -174,6 +174,20 @@ const projects = [
     mockupSub: "28 automated policy tests run in CI.",
     tags: ["React Native", "Supabase", "PostgreSQL RLS"],
     link: null
+  },
+  {
+    idx: "07",
+    year: "2026",
+    status: "Solo project — released",
+    name: "Expense Tracker",
+    tagline: "Turns bank & UPI SMS into a spending ledger, fully on-device",
+    description:
+      "An Android app that reads bank and UPI SMS and turns them into categorized Transactions, with monthly trends, Merchant and Category breakdowns and CSV/JSON export. No server, no account: data lives in on-device SQLite, and release builds strip every permission except READ_SMS, including network access. A native Kotlin SMS module under an Expo app, pure-TypeScript domain logic with 200+ automated tests, and APKs built and published by GitHub Actions on every tag.",
+    mockupHeadline: "Zero network permission in release builds",
+    mockupSub: "Your bank SMS never leaves the phone.",
+    tags: ["React Native", "Kotlin", "SQLite"],
+    link: "https://github.com/sadiq1402/expense-tracker",
+    linkLabel: "View on GitHub"
   }
 ];
 
