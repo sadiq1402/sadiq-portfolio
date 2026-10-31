@@ -12,3 +12,11 @@ button:active,
 summary:active {
   transform: translateY(1px);
 }
+
+.seo-static {
+  max-width: 72ch;
+  margin: 0 auto;
+  padding: var(--space-2xl) var(--space-md);
+  color: var(--color-ink);
+  background: var(--color-paper);
+}
