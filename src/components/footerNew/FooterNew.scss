@@ -1,10 +1,31 @@
 .footer-new {
-  padding: 32px clamp(20px, 4vw, 64px);
-  border-top: 1px solid var(--border);
+  padding-block: var(--space-3xl) var(--space-xl);
+  border-top: var(--rule-hair) solid var(--color-rule);
+  background: var(--color-paper-3);
+}
+
+.footer-new__line {
+  max-width: 24ch;
+  font-size: var(--text-section);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: var(--tracking-display);
+  color: var(--color-ink);
+}
+
+.footer-new__meta {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 10px;
-  font-size: 13px;
-  color: var(--text-faint);
+  gap: var(--space-sm) var(--space-xl);
+  margin-top: var(--space-3xl);
+  padding-top: var(--space-lg);
+  border-top: var(--rule-hair) solid var(--color-rule);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.footer-new__links {
+  display: flex;
+  gap: var(--space-lg);
 }
