@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Nav from "../components/nav/Nav";
 import Hero from "./hero/Hero";
+import Readings from "./readings/Readings";
 import About from "./about/About";
 import SkillsRows from "./skillsRows/SkillsRows";
 import ExperienceTabs from "./experienceTabs/ExperienceTabs";
@@ -28,12 +29,15 @@ const Main = () => {
     <StyleProvider value={{isDark, changeTheme}}>
       <div className={`site ${isDark ? "dark-mode" : ""}`}>
         <Nav />
-        <Hero />
-        <About />
-        <SkillsRows />
-        <ExperienceTabs />
-        <WorkShowcase />
-        <ContactSection />
+        <main>
+          <Hero />
+          <Readings />
+          <WorkShowcase />
+          <ExperienceTabs />
+          <SkillsRows />
+          <About />
+          <ContactSection />
+        </main>
         <FooterNew />
       </div>
     </StyleProvider>

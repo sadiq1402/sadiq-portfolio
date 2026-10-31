@@ -1,6 +1,9 @@
-import React, {useCallback, useEffect, useState} from "react";
+import React, {Suspense, lazy, useCallback, useEffect, useState} from "react";
 import {greeting} from "../../portfolio";
+import {hasWebGL} from "../../components/three/webgl";
 import "./Hero.scss";
+
+const TraceScene = lazy(() => import("./TraceScene"));
 
 const sources = [
   {score: 0.91, doc: "policy_terms.pdf", ref: "§4.2"},
@@ -10,12 +13,6 @@ const sources = [
 
 const answer =
   "Waiting on the surveyor report, filed 3 days ago. The SLA allows 7, so it's on track.";
-
-const stats = [
-  {value: "1000+", label: "concurrent agent sessions"},
-  {value: "500+", label: "API endpoints shipped"},
-  {value: "IIT Madras", label: "BS, Data Science"}
-];
 
 // step: 0 idle → 1 query → 2 retrieve → 3 sources → 4 generate → 5 answer → 6 done
 const STEP_DELAYS = [700, 900, 700, 900, 600];
@@ -53,8 +50,7 @@ const useTrace = () => {
   return {step, typed, replay};
 };
 
-const Trace = () => {
-  const {step, typed, replay} = useTrace();
+const Trace = ({step, typed, replay}) => {
   const on = n => (step >= n ? " is-on" : "");
 
   return (
@@ -62,7 +58,7 @@ const Trace = () => {
       <div className="trace__bar">
         <span className="trace__title">trace / claim-status-agent</span>
         <button className="trace__replay" onClick={replay} disabled={step > 0 && step < 6}>
-          {step === 6 ? "↻ replay" : "● running"}
+          {step === 6 ? "Replay" : "Running"}
         </button>
       </div>
 
@@ -74,7 +70,7 @@ const Trace = () => {
 
         <div className={"trace__row" + on(2)}>
           <span className="trace__key">retrieve</span>
-          <span className="trace__meta">top_k=3 · hybrid · 112ms</span>
+          <span className="trace__meta">top_k=3, hybrid, 112ms</span>
         </div>
 
         <ol className="trace__sources">
@@ -98,7 +94,7 @@ const Trace = () => {
 
         <div className={"trace__row" + on(4)}>
           <span className="trace__key">generate</span>
-          <span className="trace__meta">bedrock · grounded · 640ms</span>
+          <span className="trace__meta">bedrock, grounded, 640ms</span>
         </div>
 
         <p className={"trace__answer" + on(5)}>
@@ -114,53 +110,71 @@ const Trace = () => {
       </div>
 
       <figcaption className={"trace__foot" + on(6)}>
-        <span>
-          <span className="dot" /> 2 sources cited
-        </span>
+        <span>2 sources cited</span>
         <span>1.18s total</span>
       </figcaption>
     </figure>
   );
 };
 
+const Scene3D = ({step, typed, replay}) => {
+  const on = n => (step >= n ? " is-on" : "");
+
+  return (
+    <figure className="trace3d" aria-label="Example retrieval trace from a claim status agent, drawn as a 3D graph">
+      <Suspense fallback={<div className="scene" />}>
+        <TraceScene step={step} sources={sources} />
+      </Suspense>
+      <figcaption className="trace3d__readout">
+        <div className="trace3d__top">
+          <span className={"trace__query" + on(1)}>"Where is claim #48213 stuck?"</span>
+          <button className="trace__replay" onClick={replay} disabled={step > 0 && step < 6}>
+            {step === 6 ? "Replay" : "Running"}
+          </button>
+        </div>
+        <p className={"trace3d__answer" + on(5)}>
+          {answer.slice(0, typed)}
+          {step === 6 && (
+            <>
+              {" "}
+              <span className="trace__cite">[2]</span> <span className="trace__cite">[3]</span>
+            </>
+          )}
+          {step === 5 && <span className="trace__caret" aria-hidden="true" />}
+        </p>
+        <span className="visually-hidden">
+          Retrieved {sources.map((src, i) => `[${i + 1}] ${src.doc} ${src.ref}, score ${src.score}`).join("; ")}.
+        </span>
+      </figcaption>
+    </figure>
+  );
+};
+
+const HeroVisual = () => {
+  const trace = useTrace();
+  const [webgl] = useState(hasWebGL);
+  return webgl ? <Scene3D {...trace} /> : <Trace {...trace} />;
+};
+
 const Hero = () => (
   <section className="hero" id="top">
-    <div className="hero__grid" />
-    <div className="hero__inner">
+    <div className="container hero__inner">
       <div className="hero__copy">
-        <div className="hero__eyebrow hero__in" style={{"--d": "0ms"}}>
-          <span className="dot" /> {greeting.taglineLead} · {greeting.location}
-        </div>
-        <h1 className="hero__name">
-          <span className="hero__line">
-            <span style={{"--d": "100ms"}}>Sadiq</span>
-          </span>
-          <span className="hero__line">
-            <span style={{"--d": "200ms"}}>Hasan</span>
-          </span>
-        </h1>
-        <p className="hero__tagline hero__in" style={{"--d": "380ms"}}>
-          Building Generative AI <b>retrieval and agent systems</b> that hold up in production.
+        <h1 className="hero__name">{greeting.username}</h1>
+        <p className="lead hero__tagline">
+          AI Engineer building retrieval and agent systems that hold up in production.
         </p>
-        <div className="hero__cta hero__in" style={{"--d": "500ms"}}>
-          <a className="pill pill-accent" href="#work">
-            See the work →
+        <div className="hero__cta">
+          <a className="btn btn--primary" href="#work">
+            See the work
           </a>
-          <a className="pill pill-outline" href="#contact">
+          <a className="btn" href="#contact">
             Get in touch
           </a>
         </div>
-        <dl className="hero__stats hero__in" style={{"--d": "640ms"}}>
-          {stats.map(s => (
-            <div key={s.label}>
-              <dt>{s.value}</dt>
-              <dd>{s.label}</dd>
-            </div>
-          ))}
-        </dl>
       </div>
-      <div className="hero__visual hero__in" style={{"--d": "300ms"}}>
-        <Trace />
+      <div className="hero__visual">
+        <HeroVisual />
       </div>
     </div>
   </section>
