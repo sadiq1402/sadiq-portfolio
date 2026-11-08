@@ -57,6 +57,10 @@ const skillCategories = [
     skills: ["AWS Lambda", "API Gateway", "SQS", "S3", "ECS", "Docker", "CI/CD"]
   },
   {
+    category: "Observability",
+    skills: ["Langfuse", "OpenTelemetry", "LLM Tracing", "Token & Cost Monitoring", "Latency Monitoring"]
+  },
+  {
     category: "Databases & Tools",
     skills: ["PostgreSQL", "MongoDB", "Redis", "SQLite", "Git", "GitHub", "Linux"]
   }
@@ -117,10 +121,10 @@ const projects = [
     name: "AI Calling Platform",
     tagline: "Browser-based voice calling with real-time AI pipelines",
     description:
-      "Built core AI features for a browser-based calling platform — outbound and inbound voice agents (real-time STT → LLM → TTS) supporting any number of configurable campaigns, with multi-agent handoff that routes complex sub-tasks to specialized agents mid-call. Plus a live AI call copilot that coaches human agents with RAG-grounded, citation-backed suggestions, call transcription and sentiment analysis, and AI-scored LinkedIn lead sourcing. 90K+ lines of code, 400+ automated tests.",
+      "Built core AI features for a browser-based calling platform — outbound and inbound voice agents (real-time STT → LLM → TTS) supporting any number of configurable campaigns, with multi-agent handoff that routes complex sub-tasks to specialized agents mid-call. Plus a live AI call copilot that coaches human agents with RAG-grounded, citation-backed suggestions, call transcription and sentiment analysis, and AI-scored LinkedIn lead sourcing. LLM observability through self-hosted Langfuse and OpenTelemetry traces each call's agent turns and post-call analysis in one session. 90K+ lines of code, 400+ automated tests.",
     mockupHeadline: "Specialized agents hand off mid-call",
     mockupSub: "Complex sub-tasks routed to the right agent, live.",
-    tags: ["LiveKit", "Plivo", "AWS Bedrock", "RAG"],
+    tags: ["LiveKit", "Plivo", "AWS Bedrock", "RAG", "Langfuse"],
     link: null
   },
   {
